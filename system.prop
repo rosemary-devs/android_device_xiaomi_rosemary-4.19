@@ -27,6 +27,9 @@ ro.charger.enable_suspend=true
 dalvik.vm.dex2oat64.enabled=true
 ro.dalvik.vm.native.bridge=0
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 persist.vendor.dc_backlight.enable=false
 ro.display.type=oled
