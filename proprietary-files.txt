@@ -1573,6 +1573,9 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/xbin/dc_cal
 
+# Camera Feature Policy - from V14.0.8.0.TKLMIXM
+vendor/lib64/libmtkcam_featurepolicy.so|939c4b4e4d1a7c9dd8401f07dc90d713847eeae2
+
 # Camera-arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_portrait_lighting.so
