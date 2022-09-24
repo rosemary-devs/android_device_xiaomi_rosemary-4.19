@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
     libutils-v32
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V2-ndk_platform.vendor \
     android.hardware.graphics.common-V2-ndk.vendor
 
 # DRM
@@ -173,7 +172,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss-service.mediatek
+    android.hardware.gnss-V1-ndk.vendor
 
 # IMS
 PRODUCT_BOOT_JARS += \
