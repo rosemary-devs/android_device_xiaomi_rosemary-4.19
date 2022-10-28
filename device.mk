@@ -420,6 +420,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.nonblocking_ffs=0
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.rosemary
