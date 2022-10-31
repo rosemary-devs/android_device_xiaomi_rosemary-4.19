@@ -370,7 +370,8 @@ PRODUCT_PACKAGES += \
     ueventd.mt6785.rc
 
 PRODUCT_PACKAGES += \
-    init.recovery.mt6785.rc
+    init.recovery.mt6785.rc \
+    init.recovery.mt6785.sh
 
 # Sensors
 PRODUCT_PACKAGES += \
