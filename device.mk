@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
     libdrm.vendor \
+    libdrm \
     libutils-v32
 
 PRODUCT_PACKAGES += \
