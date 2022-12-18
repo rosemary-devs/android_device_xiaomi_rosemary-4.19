@@ -210,6 +210,11 @@ PRODUCT_PACKAGES += \
     libkeymaster_portable.vendor \
     libpuresoftkeymasterdevice.vendor
 
+
+# KPOC
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
