@@ -56,6 +56,9 @@ bluetooth.profile.sap.server.enabled=true
 ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
 
+# Cached app compaction
+persist.device_config.activity_manager.use_compaction=true
+
 # Camera
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
