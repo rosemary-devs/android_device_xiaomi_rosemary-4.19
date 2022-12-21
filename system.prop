@@ -31,6 +31,8 @@ ro.dalvik.vm.native.bridge=0
 persist.vendor.dc_backlight.enable=false
 ro.display.type=oled
 vendor.hbm.enable=true
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=20
 
 # Fingerprint
 ro.hardware.fp.sideCap=true
