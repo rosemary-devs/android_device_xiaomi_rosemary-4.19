@@ -102,6 +102,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r450784d
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
+# OTA
+TARGET_OTA_ASSERT_DEVICE := secret,rosemary,maltose,rosemary_p
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864         # 65536     * 1024 (sdc36)
