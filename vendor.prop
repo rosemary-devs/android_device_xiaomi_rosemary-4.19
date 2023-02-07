@@ -316,7 +316,6 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.running_without_sync_framework=true
 ro.surface_flinger.uclamp.min=150
 vendor.display.enable_optimize_refresh=1
-debug.sf.disable_backpressure=1
 ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
 debug.sf.disable_client_composition_cache=1
