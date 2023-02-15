@@ -1272,3 +1272,7 @@ on property:sys.boot_completed=1 && property:persist.radio.op.name=*
 # Enable DT2W
 on boot
     write /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode "1"
+
+# Stop Serial Console
+on boot
+    stop console
