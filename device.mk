@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libutils-v32
 
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V2-ndk_platform.vendor \
+    android.hardware.graphics.common-V2-ndk.vendor
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
