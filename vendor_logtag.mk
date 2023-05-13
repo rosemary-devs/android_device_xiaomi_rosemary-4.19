@@ -252,4 +252,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.BufferQueueDump=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.BufferQueueProducer=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.SurfaceControl=$(VENDOR_LOG_LEVEL) \
-    persist.log.tag.GraphicBuffer=$(VENDOR_LOG_LEVEL)
+    persist.log.tag.GraphicBuffer=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.lsc_nvram=$(VENDOR_LOG_LEVEL)
