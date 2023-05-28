@@ -334,9 +334,8 @@ ro.vendor.mtk_wfd_support=1
 ro.vendor.wlan.gen=gen4m
 ro.vendor.wfd.iframesize.level=0
 ro.vendor.connsys.dedicated.log=0
-ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
+persist.vendor.connsys.coredump.mode=0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
-ro.vendor.wlan.standalone.log=y
 
 # Zygote
 zygote.critical_window.minute=10
