@@ -20,7 +20,6 @@ static const variant_info_t maltose_info = {
     .model = "M2101K7BL",
     .build_fingerprint = "Redmi/maltose_global/maltose:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
 
-    .nfc = false,
 };
 
 static const variant_info_t rosemary_info = {
@@ -34,7 +33,6 @@ static const variant_info_t rosemary_info = {
     .model = "M2101K7BNY",
     .build_fingerprint = "Redmi/rosemary_global/rosemary:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
 
-    .nfc = true,
 };
 
 static const variant_info_t secret_info = {
@@ -48,7 +46,6 @@ static const variant_info_t secret_info = {
     .model = "M2101K7BG",
     .build_fingerprint = "Redmi/secret_global/secret:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
 
-    .nfc = false,
 };
 
 static const std::vector<variant_info_t> variants = {
