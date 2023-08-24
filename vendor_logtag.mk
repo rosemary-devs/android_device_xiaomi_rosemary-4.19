@@ -271,3 +271,4 @@ persist.log.tag.MAPI-SocketListener=S
 persist.log.tag.MAPI-CommandProcessor=S
 persist.log.tag.RpAudioControl=S
 persist.log.tag.gralloc4=S
+persist.log.tag.OpenGLRenderer=S
