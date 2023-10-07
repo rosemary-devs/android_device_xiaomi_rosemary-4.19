@@ -10,25 +10,44 @@
 #include "vendor_init.h"
 
 static const variant_info_t maltose_info = {
-    .hwc_value = "Global",
-    .hwname_value="maltose",
+    .hwc_value = "",
     .sku_value = "",
+    .vendor_sku_value = "maltose",
+
+    .brand = "Redmi",
     .device = "maltose",
+    .marketname = "Redmi Note 10S",
+    .model = "M2101K7BL",
+    .build_fingerprint = "Redmi/maltose_global/maltose:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
+
     .nfc = false,
 };
 
 static const variant_info_t rosemary_info = {
-    .hwc_value = "Global",
-    .hwname_value="rosemary",
+    .hwc_value = "",
     .sku_value = "",
+    .vendor_sku_value = "rosemary",
+
+    .brand = "Redmi",
     .device = "rosemary",
+    .marketname = "Redmi Note 10S",
+    .model = "M2101K7BNY",
+    .build_fingerprint = "Redmi/rosemary_global/rosemary:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
+
     .nfc = true,
 };
 
 static const variant_info_t secret_info = {
-    .hwname_value="secret",
+    .hwc_value = "",
     .sku_value = "",
+    .vendor_sku_value = "secret",
+
+    .brand = "Redmi",
     .device = "secret",
+    .marketname = "Redmi Note 10S",
+    .model = "M2101K7BG",
+    .build_fingerprint = "Redmi/secret_global/secret:12/SP1A.210812.016/V14.0.8.0.TKLMIXM:user/release-keys",
+
     .nfc = false,
 };
 
