@@ -77,6 +77,10 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# Disable sparse on all filesystem images
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_rosemary
 TARGET_RECOVERY_DEVICE_MODULES ?= init_rosemary
