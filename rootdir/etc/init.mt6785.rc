@@ -80,8 +80,6 @@ on charger
     write /sys/class/leds/lcd-backlight/brightness "1000"
     write /sys/class/leds/lcd-backlight/trigger "backlight"
 
-    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
-    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
     chmod 0666 /dev/kmsg
@@ -116,13 +114,6 @@ on charger
     chmod 0666 /sys/class/power_supply/battery/typec_mode
     mkdir /data/vendor/charge_logger 0775 system system
     start charge_logger
-
-    chown system system /sys/class/leds/lcd-backlight/brightness
-    chmod 0664 /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-
-    start vendor.light-default
 
 	# M306 run batterysecret in off-charge mode
     start batterysecret
@@ -254,12 +245,16 @@ service charge_logger /vendor/bin/charge_logger
    disabled
    oneshot
 
+
 service charger /system/bin/charger
     class charger
-    critical
-    #seclabel u:r:charger:s0
-    group system graphics
-    seclabel u:r:healthd:s0
+    user system
+    group system graphics wakelock input
+    capabilities SYS_BOOT
+    file /dev/kmsg w
+    file /sys/fs/pstore/console-ramoops-0 r
+    file /sys/fs/pstore/console-ramoops r
+    file /proc/last_kmsg r
 
 on property:sys.boot_completed=1
     start charge_logger
