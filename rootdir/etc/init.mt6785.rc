@@ -246,7 +246,7 @@ service charge_logger /vendor/bin/charge_logger
    oneshot
 
 
-service charger /system/bin/charger
+service vendor.charger /system/bin/charger
     class charger
     user system
     group system graphics wakelock input
