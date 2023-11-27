@@ -1,2 +1,6 @@
 # Bluetooth
 bluetooth.hci.erroneous_data_reporting.enabled        u:object_r:bluetooth_config_prop:s0
+
+# Xiaomi specific build properties
+ro.fota.oem                        u:object_r:build_prop:s0
+ro.product.marketname              u:object_r:build_prop:s0
