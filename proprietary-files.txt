@@ -222,6 +222,10 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/FV-SAM-MTKXX.dat
 vendor/etc/smartpa_param/AW_DSP.bin
 
+# Bip
+vendor/bin/bip
+vendor/etc/init/init.bip.rc
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
@@ -1825,6 +1829,7 @@ vendor/firmware/soc1_0_ram_bt_2a_1_hdr.bin
 vendor/firmware/soc1_0_ram_mcu_2a_1_hdr.bin
 vendor/firmware/soc1_0_ram_wifi_2a_1_hdr.bin
 vendor/firmware/st21nfc_fw7.bin
+vendor/etc/default_pd_calibration.bin
 
 # Fuelgauge
 vendor/bin/fuelgauged
