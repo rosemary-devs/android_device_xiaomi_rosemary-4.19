@@ -10,6 +10,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6785
+    init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6785.rc \
+    init.mt6785.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    init.stnfc.rc \
+    init_connectivity.rc \
+    ueventd.mt6785.rc
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
