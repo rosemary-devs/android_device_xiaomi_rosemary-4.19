@@ -224,5 +224,20 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.0.vendor \
     android.hardware.usb.gadget@1.1.vendor \
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    wpa_supplicant \
+    hostapd \
+    libwifi-hal-mt66xx \
+    android.hardware.wifi@1.0-service-lazy
+
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/rosemary/rosemary-vendor.mk)

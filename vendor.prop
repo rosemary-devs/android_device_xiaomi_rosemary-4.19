@@ -49,3 +49,19 @@ ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
 ro.vendor.mtk_microtrust_tee_support=1
 ro.mtk_key_manager_support=1
+
+# WiFi
+ro.vendor.wifi.sap.interface=ap0
+wifi.concurrent.interface=ap0
+ro.vendor.wifi.sap.concurrent.iface=ap1
+ro.vendor.wfd.dummy.enable=0
+ro.vendor.wfd.iframesize.level=0
+persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.patch.version=-1
+persist.vendor.connsys.dynamic.dump=0
+vendor.connsys.driver.ready=no
+ro.vendor.mtk_wfd_support=1
+ro.vendor.wlan.gen=gen4m
+ro.vendor.wfd.iframesize.level=0
+ro.vendor.connsys.dedicated.log=1
+ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
