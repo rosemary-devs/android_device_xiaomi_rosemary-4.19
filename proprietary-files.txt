@@ -4,6 +4,28 @@ vendor/lib/libladder.so
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 
+# APU
+vendor/lib64/libapusys.so
+vendor/lib64/libapusys_edma.so
+vendor/lib64/libapu_mdw.so
+vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
+system_ext/lib64/libapuwareapusys.mtk.so
+system_ext/lib64/libapuwareapusys_v2.mtk.so
+system_ext/lib64/libapuwarehmp.mtk.so
+system_ext/lib64/libapuwareutils.mtk.so
+system_ext/lib64/libapuwareutils_v2.mtk.so
+system_ext/lib64/libapuwarexrp.mtk.so
+system_ext/lib64/libapuwarexrp_v2.mtk.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
+
 # Audio
 vendor/bin/rt5512_calibration
 vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
