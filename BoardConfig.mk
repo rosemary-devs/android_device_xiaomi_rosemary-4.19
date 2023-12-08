@@ -68,6 +68,9 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# Display
+TARGET_SCREEN_DENSITY := 440
+
 # DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
 
