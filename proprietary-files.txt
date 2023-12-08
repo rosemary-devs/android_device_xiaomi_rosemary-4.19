@@ -155,6 +155,13 @@ vendor/etc/dsi_panel_k7_44_06_0b_fhdp_video_mi.xml
 vendor/etc/dsi_panel_k7_44_0e_0b_fhdp_video_mi.xml
 vendor/etc/screen_light.xml
 
+# Fuelgauge
+vendor/bin/fuelgauged
+vendor/bin/fuelgauged_nvram
+vendor/etc/init/fuelgauged_init.rc
+vendor/etc/init/fuelgauged_nvram_init.rc
+vendor/lib/libfgauge_gm30.so
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/lc_nvram_prinfo
