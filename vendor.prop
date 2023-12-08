@@ -34,6 +34,13 @@ vendor.mtk.vdec.waitkeyframeforplay=9
 ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.mtk_hdr_video_support=1
 
+# Neural Networks
+debug.mtk_tflite.target_nnapi=29
+ro.vendor.mtk_nn.option=D,E,F,Z
+ro.vendor.mtk_nn_quant_preferred=1
+ro.vendor.mtk_nn_support=1
+ro.vendor.mtk_nn_baseline_support=1
+
 # SurfaceFlinger
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
