@@ -224,6 +224,14 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+# Common
+PRODUCT_PACKAGES += \
+    libtextclassifier_hash.vendor \
+    libruy.vendor \
+    libmemunreachable \
+    libmemunreachable.vendor \
+    libflatbuffers-cpp.vendor
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
