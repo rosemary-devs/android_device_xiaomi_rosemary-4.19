@@ -354,6 +354,17 @@ vendor/etc/dsi_panel_k7_44_06_0b_fhdp_video_mi.xml
 vendor/etc/dsi_panel_k7_44_0e_0b_fhdp_video_mi.xml
 vendor/etc/screen_light.xml
 
+# Fingerprint
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_firmware.bin
+vendor/lib64/hw/fingerprint.fpc.default.so
+vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+
 # Firmware
 vendor/firmware/Conf_MultipleTest.ini
 vendor/firmware/WIFI_RAM_CODE_soc1_0_2a_1.bin
