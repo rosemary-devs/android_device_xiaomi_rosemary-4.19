@@ -334,6 +334,9 @@ PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
     libmtkperf_client
 
+# Properties
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0.vendor \
