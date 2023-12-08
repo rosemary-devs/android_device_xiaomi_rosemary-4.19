@@ -22,6 +22,18 @@ ro.vendor.cabc.enable=true
 # Gatekeeper
 ro.hardware.gatekeeper=beanpod
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+media.c2.dmabuf.padding=3072
+ro.vendor.mtk_config_max_dram_size=0x800000000
+ro.vendor.smvr.p2batch.vga=16
+ro.vendor.smvr.p2batch.hd=8
+ro.vendor.smvr.p2batch.fhd=4
+ro.vendor.jpeg_decode_sw_opt=1
+vendor.mtk.vdec.waitkeyframeforplay=9
+ro.vendor.pref_scale_enable_cfg=1
+ro.vendor.mtk_hdr_video_support=1
+
 # SurfaceFlinger
 ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
