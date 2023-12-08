@@ -1,3 +1,10 @@
+# Audio
+ro.audio.monitorRotation=true
+ro.vendor.mtk_audio_alac_support=1
+ro.vendor.mtk_audio_tuning_tool_ver=V2.2
+ro.vendor.mtk_audio_ape_support=1
+ro.vendor.audio.us.proximity=true
+
 # Display
 persist.sys.mcd_config_file=/system/etc/mcd_default.conf
 ro.opengles.version=196610
