@@ -32,3 +32,10 @@ debug.sf.disable_client_composition_cache=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.predict_hwc_composition_strategy=0
+
+# Trusted Execution Environment (TEE)
+ro.vendor.mtk_tee_gp_support=1
+ro.hardware.kmsetkey=beanpod
+ro.hardware.gatekeeper=beanpod
+ro.vendor.mtk_microtrust_tee_support=1
+ro.mtk_key_manager_support=1
