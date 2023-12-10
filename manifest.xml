@@ -610,7 +610,7 @@
         <fqname>@1.0::IDisplayFeature/default</fqname>
     </hal>
     <sepolicy>
-        <version>31.0</version>
+        <version>34.0</version>
     </sepolicy>
     <kernel target-level="5"/>
 </manifest>
