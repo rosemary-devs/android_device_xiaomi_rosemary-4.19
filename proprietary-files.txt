@@ -2208,6 +2208,7 @@ vendor/bin/lbs_hidl_service
 vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/lib64/lbs_hidl_service-impl.so
+vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # WOD
 vendor/bin/epdg_wod
