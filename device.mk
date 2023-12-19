@@ -175,6 +175,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss-V1-ndk.vendor
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
