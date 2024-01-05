@@ -232,6 +232,9 @@ PRODUCT_PACKAGES += \
     libkeymaster_portable.vendor \
     libpuresoftkeymasterdevice.vendor
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
 
 # KPOC
 PRODUCT_PACKAGES += \
