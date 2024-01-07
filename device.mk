@@ -82,7 +82,9 @@ PRODUCT_PACKAGES += \
 
 # Audio Configs
 PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 
 # SoundTrigger
 PRODUCT_PACKAGES += \
@@ -477,7 +479,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
-    libshim_sensors
+    libshim_sensors \
     sensors.dynamic_sensor_hal
 
 PRODUCT_COPY_FILES += \
@@ -512,6 +514,14 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
     android.hardware.wifi-service-lazy
+
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0.vendor \
+    android.hardware.wifi@1.1.vendor \
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi@1.3.vendor \
+    android.hardware.wifi@1.4.vendor \
+    android.hardware.wifi@1.5.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
