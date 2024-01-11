@@ -97,6 +97,10 @@ BOARD_CUSTOM_DTBOIMG_MK := $(DEVICE_PATH)/dtbo/dtbo.mk
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibility_matrix.xml
+ODM_MANIFEST_SKUS += \
+    rosemary
+
+ODM_MANIFEST_ROSEMARY_FILES := $(DEVICE_PATH)/manifest_rosemary.xml
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64

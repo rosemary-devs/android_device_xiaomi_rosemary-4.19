@@ -2424,6 +2424,22 @@ vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libtflite_mtk.so
 
+# NFC
+etc/nfcee_access.xml
+vendor/bin/hw/android.hardware.nfc@1.2-service-st
+vendor/bin/STFlashTool
+vendor/bin/nfcstackp-vendor
+vendor/bin/stfactorydemo-vendor
+vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
+vendor/etc/libnfc-hal-st.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/st21nfc_conf.txt
+vendor/lib/nfc_nci.st21nfc.st.so
+vendor/lib64/nfc_nci.st21nfc.st.so
+vendor/lib/libnxp_extamp_intf.so
+vendor/lib64/libnxp_extamp_intf.so
+
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/lc_nvram_prinfo

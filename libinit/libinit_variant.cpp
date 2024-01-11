@@ -14,6 +14,7 @@ using android::base::GetProperty;
 
 #define HWC_PROP "ro.boot.hwc"
 #define VENDOR_SKU_PROP "ro.boot.product.vendor.sku"
+#define NFC_SUPPORT "ro.vendor.have_nfc_support"
 
 void search_variant(const std::vector<variant_info_t> variants) {
     std::string hwc_value = GetProperty(HWC_PROP, "");
@@ -43,5 +44,9 @@ void set_variant_props(const variant_info_t variant) {
         property_override("ro.build.description", fingerprint_to_description(variant.build_fingerprint));
     }
 
-
+    if (variant.nfc_support) {
+        set_ro_build_prop(NFC_SUPPORT, "true");
+    } else {
+        set_ro_build_prop(NFC_SUPPORT, "false");
+    }
 }
