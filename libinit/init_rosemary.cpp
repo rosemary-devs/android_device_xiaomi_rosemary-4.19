@@ -51,10 +51,25 @@ static const variant_info_t secret_info = {
     .nfc_support = false
 };
 
+static const variant_info_t rosemary_p_info = {
+    .hwc_value = "",
+    .sku_value = "",
+    .vendor_sku_value = "rosemaryp",
+
+    .brand = "POCO",
+    .device = "rosemary_p",
+    .marketname = "POCO M5s",
+    .model = "2207117BPG",
+    .build_fingerprint = "POCO/rosemary_p_global/rosemary:12/SP1A.210812.016/V14.0.8.0.V14.0.8.0.TFFMIXM:user/release-keys",
+
+    .nfc_support = true,
+};
+
 static const std::vector<variant_info_t> variants = {
     maltose_info,
     rosemary_info,
     secret_info,
+    rosemary_p_info
 };
 
 void vendor_load_properties() {
