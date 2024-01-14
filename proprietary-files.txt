@@ -1841,6 +1841,10 @@ vendor/firmware/soc1_0_ram_wifi_2a_1_hdr.bin
 vendor/firmware/st21nfc_fw7.bin
 vendor/etc/default_pd_calibration.bin
 
+
+# FM Radio
+-system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
+
 # Fuelgauge
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
