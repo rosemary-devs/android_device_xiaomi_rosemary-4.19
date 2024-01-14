@@ -269,7 +269,6 @@ service batterysecret /vendor/bin/batterysecret
 on property:sys.boot_completed=1
     start batterysecret		
 
-
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
 
@@ -442,6 +441,10 @@ on post-fs-data
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log_to_fs
 
     chmod 0666 /dev/pmem_multimedia
+
+    # DT2W
+    chown system system /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode
+    chmod 0660 /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode
 
     # set ptmx group to non-root
     chown root radio /dev/ptmx
@@ -1045,8 +1048,8 @@ on boot
     chown system system /sys/bus/platform/devices/aw8622/test_cnt
 
     # DT2W
-    chown system system /sys/touchpanel/double_tap
-    chmod 0660 /sys/touchpanel/double_tap
+    chown system system /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode
+    chmod 0660 /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode
 
     # Fingerprint
     chown system system /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/irq
@@ -1259,3 +1262,6 @@ on property:sys.boot_completed="" && property:persist.radio.op.name=UN && proper
 on property:sys.boot_completed=1 && property:persist.radio.op.name=*
    setprop persist.vendor.op.name.last ${persist.radio.op.name}
 
+# Enable DT2W
+on boot
+    write /sys/devices/platform/11007000.i2c0/i2c-0/0-0038/fts_gesture_mode "1"
