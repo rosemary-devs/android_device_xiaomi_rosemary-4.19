@@ -1,0 +1,15 @@
+# Unpinned blobs from MIUI V14.0.8.0 TKLMIXM (rosemary) fastboot package
+
+audio_dsp.img;AB
+cam_vpu1.img;AB
+cam_vpu2.img;AB
+cam_vpu3.img;AB
+gz.img;AB
+lk.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
+
+# From MIUI 13.0.5 SFFTWXM (rosemary_p)
+md1img.img;AB
