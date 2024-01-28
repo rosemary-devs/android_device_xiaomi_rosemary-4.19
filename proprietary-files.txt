@@ -26,6 +26,14 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 
+# ATCID
+vendor/bin/atcid
+vendor/etc/init/atcid.rc
+
+# APDB
+vendor/etc/apdb/APDB_MT6785_S01__W2236
+vendor/etc/apdb/APDB_MT6785_S01__W2236_ENUM
+
 # Audio
 vendor/bin/rt5512_calibration
 vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
@@ -221,6 +229,10 @@ vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/FV-SAM-MTKXX.dat
 vendor/etc/smartpa_param/AW_DSP.bin
+
+# AudioCMDService
+vendor/bin/audiocmdservice_atci
+vendor/etc/init/audiocmdservice_atci.rc
 
 # Bip
 vendor/bin/bip
@@ -2191,11 +2203,46 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# Lbs HIDL Service
+vendor/bin/lbs_hidl_service
+vendor/etc/init/lbs_hidl_service.rc
+vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
+vendor/lib64/lbs_hidl_service-impl.so
+
+# WOD
+vendor/bin/epdg_wod
+vendor/etc/init/init.wod.rc
+vendor/lib/libwo.so
+vendor/lib64/libwo.so
+
+# Ipsec
+vendor/bin/ipsec_mon
+vendor/etc/init/ipsec_mon.rc
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG2.crt
+vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG3.crt
+vendor/etc/ipsec/ipsec.d/cacerts/Entrust.net_Certification_Authority_2048.cer
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_PCA_G3_Root.der
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA.der
+vendor/etc/ipsec/ipsec.d/cacerts/GeoTrust_Primary_CA_G2_ECC.der
+vendor/etc/ipsec/ipsec.d/cacerts/Root-R3.cer
+vendor/etc/ipsec/ipsec.d/cacerts/Root_CA_1003.crt
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G4.der
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G5.der
+vendor/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der
+vendor/etc/ipsec/ipsec.d/cacerts/gold.cer
+vendor/etc/ipsec/ipsec.d/cacerts/thawte.der
+vendor/etc/ipsec/ssl/openssl.cnf
+vendor/etc/ipsec/ipsec.conf
+vendor/etc/ipsec/strongswan.conf
+vendor/lib/libhydra.so
+vendor/lib64/libhydra.so
+
 # IR
 vendor/bin/consumerird
 vendor/lib/hw/consumerir.default.so
-vendor/lib64/hw/consumerir.default.so
-	
+vendor/lib64/hw/consumerir.default.so	
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
@@ -2297,6 +2344,27 @@ vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libviagpsrpc.so
 vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
+
+# Mediatek
+vendor/bin/mtk_agpsd
+vendor/bin/mtk_plpath_utils_ota
+vendor/etc/init/mtk_agpsd_p.rc
+vendor/lib/libcharon-ss.so
+vendor/lib/libmtkspparser.so
+vendor/lib64/libcharon-ss.so
+vendor/lib64/libmtkisp_metadata.so
+vendor/lib64/libmtkspparser.so
+
+# MMAgent
+vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
+vendor/lib64/libmmagent.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
+
+# MTD (Xiaomi)
+vendor/bin/mtd@1.2
+vendor/lib64/libmt@1.2.so
 
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
@@ -2412,6 +2480,12 @@ vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/libsensor_custom.so
 
+# SoterService
+vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
+vendor/bin/SoterProvisioningTool
+vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc
+vendor/lib64/vendor.microtrust.hardware.soter@1.0.so
+
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
 vendor/bin/netdagent
@@ -2502,6 +2576,10 @@ vendor/thh/ta/isee_model.json
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
+
+# WFCA
+vendor/bin/wfca
+vendor/etc/init/init.wfca.rc
 
 # Wi-Fi
 vendor/bin/wlan_assistant
