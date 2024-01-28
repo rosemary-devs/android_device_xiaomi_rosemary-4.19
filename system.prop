@@ -1,0 +1,86 @@
+# Adb
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+# Atrace
+debug.atrace.tags.enableflags=0
+
+# Audio
+ro.audio.silent=0
+ro.config.vc_call_vol_steps=9
+
+# Bluetooth
+ro.bluetooth.emb_wp_mode=false
+ro.bluetooth.wipower=false
+
+# Brand
+Build.BRAND=MTK
+
+# Camera
+ro.camera.sound.forced=0
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+ro.dalvik.vm.native.bridge=0
+
+# Display
+persist.vendor.dc_backlight.enable=false
+ro.display.type=oled
+vendor.hbm.enable=true
+
+# Fingerprint
+ro.hardware.fp.sideCap=true
+
+# GPU
+ro.opengles.version=196610
+
+# Feature flags
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+sys.ipo.disable=1
+sys.ipo.pwrdncap=2
+ro.iorapd.enable=false
+
+# Logging
+persist.sys.mdlog_dumpback=2
+
+# Perf
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+
+# RIL
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
+
+# USB
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+persist.vendor.otg_control=true
+
+# WiFi
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
+ro.wifi.channels=
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
