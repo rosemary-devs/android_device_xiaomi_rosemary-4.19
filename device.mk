@@ -329,6 +329,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_rosemary/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_rosemary/com.android.nfc_extras.xml
 
+# NFC Configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
