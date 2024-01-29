@@ -20,6 +20,12 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
+vendor/lib/libapu_mdw.so
+vendor/lib/libapusys.so
+vendor/lib/libapusys_edma.so
+vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
+vendor/lib64/APUWareUtilsServer.so
+vendor/lib64/APUWareXrpServer.so
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libapusys.so
 vendor/lib64/libapusys_edma.so

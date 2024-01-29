@@ -215,6 +215,8 @@ ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.mtk_hdr_video_support=1
 
 # MediaTek
+ro.soc.manufacturer=Mediatek
+ro.soc.model=MT6785
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc8sp-mt6785
 ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp-mt6785-V1.12.13_xiaomi.s0mp1.k85v1.64_P16
 ro.vendor.mediatek.platform=MT6785
