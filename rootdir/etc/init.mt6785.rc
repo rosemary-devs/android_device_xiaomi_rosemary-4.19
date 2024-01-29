@@ -118,6 +118,7 @@ on charger
     start charge_logger
 
     chown system system /sys/class/leds/lcd-backlight/brightness
+    chmod 0664 /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
 
@@ -252,6 +253,13 @@ service charge_logger /vendor/bin/charge_logger
    group system system wakelock
    disabled
    oneshot
+
+service charger /system/bin/charger
+    class charger
+    critical
+    #seclabel u:r:charger:s0
+    group system graphics
+    seclabel u:r:healthd:s0
 
 on property:sys.boot_completed=1
     start charge_logger
