@@ -312,6 +312,14 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.micharge</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiCharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>28.0</sepolicy-version>
