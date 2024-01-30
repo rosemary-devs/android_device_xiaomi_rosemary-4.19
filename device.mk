@@ -99,7 +99,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     audio.bluetooth.default \
     libbluetooth_audio_session \
-    libldacBT_bco
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
@@ -490,7 +489,7 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.mt6785
+    fstab.mt6785 \
     fstab.mt6785.ramdisk \
     init.ago.rc \
     init.cgroup.rc \
