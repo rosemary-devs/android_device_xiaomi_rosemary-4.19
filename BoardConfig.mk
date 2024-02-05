@@ -98,10 +98,8 @@ BOARD_HAVE_MTK_FM := true
 TARGET_USES_VULKAN := true
 HWUI_COMPILE_FOR_PERF := true
 
-# DTBO
-BOARD_KERNEL_SEPARATED_DTBO := true
+# DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_CUSTOM_DTBOIMG_MK := $(DEVICE_PATH)/dtbo/dtbo.mk
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -119,6 +117,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/rosemary
 TARGET_KERNEL_CONFIG := rosemary_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := secret,rosemary,maltose,rosemary_p
