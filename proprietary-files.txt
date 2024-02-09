@@ -799,6 +799,9 @@ vendor/lib/libSonyIMX386PdafLibrary.so
 vendor/lib/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib/libSonyIMX519PdafLibrary.so
 vendor/lib/libSonyIMX519PdafLibraryWrapper.so
+vendor/lib/libasn1c_core.so
+vendor/lib/libasn1c_mapi.so
+vendor/lib/libasn1c_mdmi.so
 vendor/lib/libcam.feature_utils.so
 vendor/lib/libcam.hal3a.log.so
 vendor/lib/libcam.hal3a.v3.lscMgr.so
@@ -1395,11 +1398,15 @@ vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 vendor/lib64/lib_sr_models.so
+vendor/lib64/libacdk.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalhLDC.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_dc_plugin_xiaomi_v2.so
+vendor/lib64/libasn1c_core.so
+vendor/lib64/libasn1c_mapi.so
+vendor/lib64/libasn1c_mdmi.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcam.chdr.so
 vendor/lib64/libcam.feature_utils.so
@@ -2107,10 +2114,6 @@ vendor/etc/virtual-spn-conf-by-efgid1.xml
 vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
-vendor/lib/libasn1c_core.so
-vendor/lib/libasn1c_mapi.so
-vendor/lib/libasn1c_mdmi.so
-vendor/lib/libcapctrl.so
 vendor/lib/libcares_naptr.so
 vendor/lib/libcarrierconfig.so
 vendor/lib/libccci_util.so
@@ -2150,11 +2153,6 @@ vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
-vendor/lib64/libacdk.so
-vendor/lib64/libasn1c_core.so
-vendor/lib64/libasn1c_mapi.so
-vendor/lib64/libasn1c_mdmi.so
-vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
 vendor/lib64/libccci_util.so
@@ -2336,6 +2334,7 @@ vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libalacdec_mtk.so
+vendor/lib/libcapctrl.so
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
@@ -2376,6 +2375,7 @@ vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl-mtk@1.0.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
 vendor/lib64/libMtkOmxCore.so
+vendor/lib64/libcapctrl.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
