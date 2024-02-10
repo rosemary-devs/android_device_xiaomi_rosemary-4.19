@@ -275,8 +275,8 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
-# Batterysecret - From  rosemary-user-12-SP1A.210812.016-V13.0.16.0.SKLMIXM-release-keys
-vendor/bin/batterysecret|4e3340f4bf9df860fee43ead8cc8ba99fd6a8e85
+# Batterysecret
+vendor/bin/batterysecret
 
 # Camera
 vendor/bin/cal_tool
@@ -2279,13 +2279,6 @@ vendor/etc/ipsec/ipsec.conf
 vendor/etc/ipsec/strongswan.conf
 vendor/lib/libhydra.so
 vendor/lib64/libhydra.so
-
-# KPOC - from rosemary-user-12-SP1A.210812.016-V13.0.16.0.SKLMIXM-release-keys
-bin/kpoc_charger|4d7f53ddc90b7012daea9b718ce333388e917347
-etc/init/kpoc_charger.rc|78e5ceefcbd35490f3959853a07bb3eb6c99f616
-lib/libsysenv_system.so|93eb7a2a3440f5e42ef4ff4ae7389c44c7defc8d
-lib64/libshowlogo.so|416a0c13ce36de90d272827a42ef4971b9d2864a
-lib64/libsysenv_system.so|35fa66acefe4732b9dfd1fc9a910aa201ca8f6e5
 
 # IR
 vendor/bin/consumerird
