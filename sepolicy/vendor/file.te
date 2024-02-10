@@ -1,0 +1,24 @@
+# Camera
+type persist_camera_data_file, data_file_type, file_type;
+
+# Fingerprint
+type fingerprint_data_file, core_data_file_type, data_file_type, file_type;
+type vendor_fingerprint_data_file, data_file_type, file_type;
+type vendor_fingerprint_device, dev_type;
+type sysfs_fingerprint, fs_type, sysfs_type;
+
+
+# Health
+type vendor_sysfs_ac_supply, fs_type, sysfs_type;
+type vendor_sysfs_battery_supply, fs_type, sysfs_type;
+type vendor_sysfs_usb_supply, fs_type, sysfs_type;
+type vendor_sysfs_charger_supply, fs_type, sysfs_type;
+type vendor_sysfs_bms_supply, fs_type, sysfs_type;
+type vendor_sysfs_parallel_supply, fs_type, sysfs_type;
+type vendor_sysfs_main_supply, fs_type, sysfs_type;
+
+# Performance
+type proc_sched_stune, fs_type, proc_type;
+
+# Touchpanel
+type sysfs_touchpanel, sysfs_type, fs_type;
