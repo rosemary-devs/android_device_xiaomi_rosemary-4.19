@@ -335,36 +335,15 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor \
-    android.hardware.media.c2@1.1.vendor \
-    android.hardware.media.c2@1.2.vendor \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
-    libeffects \
-    libeffectsconfig.vendor \
-    libstagefright_amrnb_common.vendor \
-    libstagefright_bufferpool@2.0.1.vendor \
-    libstagefright_enc_common.vendor \
-    libstagefright_flacdec.vendor \
-    libcodec2_hidl@1.0.vendor \
     libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
-    libcodec2_soft_common.vendor \
-    libminijail \
-    libminijail.vendor \
-    libstagefright_foundation.vendor \
-    libstagefright_foundation-v33 \
-    libstagefright_softomx \
-    libstagefright_softomx.vendor \
+    libavservices_minijail_vendor \
     libstagefright_softomx_plugin.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libsfplugin_ccodec \
-    libstagefright_foundation-v33 
+    libcodec2_soft_common.vendor
 
-# Media (OMX)
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service
+    libstagefright_foundation-v33
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
