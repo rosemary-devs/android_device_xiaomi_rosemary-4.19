@@ -116,7 +116,6 @@ ro.vendor.composer_version=2.2
 ro.vendor.mtk_dre30_support=1
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_prefer_64bit_proc=0
-ro.vendor.mtk_dre30_support=1
 ro.vendor.mtk_pq_support=2
 ro.vendor.pq.mtk_pq_video_whitelist_support=0
 ro.vendor.pq.mtk_video_transition=0
@@ -138,12 +137,10 @@ ro.vendor.pq.mtk_disp_tdshp_support=0
 ro.vendor.pq.mtk_disp_color_support=1
 ro.vendor.pq.mtk_disp_ccorr_support=1
 ro.vendor.pq.mtk_disp_gamma_support=1
-ro.vendor.pq.mtk_aal_support=1
 ro.vendor.pq.mtk_dre30_support=1
 ro.vendor.pq.mtk_disp_game_pq_support=1
 ro.vendor.pq.mtk_backlight_smooth_support=1
 ro.vendor.pq.mtk_ultra_dimming_support=1
-ro.vendor.mtk_ultra_dimming_support=1
 ro.vendor.pq.mtk_blulight_def_support=1
 ro.vendor.mtk_hdr_video_support=1
 ro.vendor.mtk_ultra_dimming_support=1
@@ -215,7 +212,6 @@ ro.vendor.smvr.p2batch.fhd=4
 ro.vendor.jpeg_decode_sw_opt=1
 vendor.mtk.vdec.waitkeyframeforplay=9
 ro.vendor.pref_scale_enable_cfg=1
-ro.vendor.mtk_hdr_video_support=1
 
 # MediaTek
 ro.soc.manufacturer=Mediatek
@@ -289,7 +285,6 @@ import /vendor/build_${ro.boot.radio.multisim.config}_vendor.prop
 init.userspace_reboot.is_supported=true
 
 # SurfaceFlinger
-ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
@@ -318,7 +313,6 @@ ro.surface_flinger.uclamp.min=150
 vendor.display.enable_optimize_refresh=1
 ro.surface_flinger.set_idle_timer_ms=250
 ro.surface_flinger.set_touch_timer_ms=300
-debug.sf.disable_client_composition_cache=1
 
 # TEE
 ro.vendor.mtk_tee_gp_support=1
@@ -332,7 +326,6 @@ ro.vendor.wifi.sap.interface=ap0
 wifi.concurrent.interface=ap0
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wfd.dummy.enable=0
-ro.vendor.wfd.iframesize.level=0
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.patch.version=-1
 persist.vendor.connsys.dynamic.dump=0
