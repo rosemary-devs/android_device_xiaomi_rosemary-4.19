@@ -238,10 +238,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.system.keystore2
 
-# KPOC
-PRODUCT_PACKAGES += \
-    libsuspend
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
