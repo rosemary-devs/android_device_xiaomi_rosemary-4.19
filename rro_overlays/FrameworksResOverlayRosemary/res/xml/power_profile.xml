@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on.display0">49.98</item>
-    <item name="screen.full.display0">285.11</item>
+    <item name="screen.on">49.98</item>
+    <item name="screen.full">285.11</item>
     <item name="bluetooth.active">25.02</item>
     <item name="bluetooth.on">0.72</item>
     <item name="wifi.on">0.11</item>
     <item name="wifi.active">98.63</item>
     <item name="wifi.scan">22.86</item>
-    <item name="audio">17.14</item>
-    <item name="video">97.86</item>
+    <item name="dsp.audio">17.14</item>
+    <item name="dsp.video">97.86</item>
     <item name="camera.flashlight">0.1</item>
     <item name="camera.avg">633.84</item>
     <item name="gps.on">29.84</item>
