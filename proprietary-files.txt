@@ -5,21 +5,6 @@ vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 
 # APU
-system_ext/lib64/libapuwareapusys.mtk.so
-system_ext/lib64/libapuwareapusys_v2.mtk.so
-system_ext/lib64/libapuwarehmp.mtk.so
-system_ext/lib64/libapuwareutils.mtk.so
-system_ext/lib64/libapuwareutils_v2.mtk.so
-system_ext/lib64/libapuwarexrp.mtk.so
-system_ext/lib64/libapuwarexrp_v2.mtk.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 vendor/lib/libapu_mdw.so
 vendor/lib/libapusys.so
 vendor/lib/libapusys_edma.so
@@ -2314,7 +2299,8 @@ vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
-vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl-mtk@1.0.so
+vendor/etc/mtk_omx_core.cfg
+vendor/etc/mtk_platform_codecs_config.xml
 vendor/lib/AVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
@@ -2330,13 +2316,11 @@ vendor/lib/libcapctrl.so
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
-vendor/lib/libcodec2_soft_common.so
 vendor/lib/libcodec2_soft_mtk_alacdec.so
 vendor/lib/libcodec2_soft_mtk_apedec.so
 vendor/lib/libcodec2_soft_mtk_imaadpcmdec.so
 vendor/lib/libcodec2_soft_mtk_mp3dec.so
 vendor/lib/libcodec2_soft_mtk_msadpcmdec.so
-vendor/lib/libcodec2_vndk.so
 vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
 vendor/lib/libformatter.so
@@ -2355,7 +2339,6 @@ vendor/lib/libvc1dec_sa.ca7.so
 vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility.so
 vendor/lib/libvcodecdrv.so
-vendor/lib/libvcodecdrv_header_stub.so
 vendor/lib/libviagpsrpc.so
 vendor/lib/libvp8dec_sa.ca7.so
 vendor/lib/libvp8enc_sa.ca7.so
@@ -2363,7 +2346,6 @@ vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvpu.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
-vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl-mtk@1.0.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
 vendor/lib64/libMtkOmxCore.so
@@ -2371,17 +2353,16 @@ vendor/lib64/libcapctrl.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_soft_common.so
 vendor/lib64/libcodec2_soft_mtk_alacdec.so
 vendor/lib64/libcodec2_soft_mtk_apedec.so
 vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so
 vendor/lib64/libcodec2_soft_mtk_mp3dec.so
 vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
-vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libhevce_sb.ca7.android.so
+vendor/lib64/libmvpu_config_data.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libvcodec_oal.so
 vendor/lib64/libvcodecdrv_header_stub.so
