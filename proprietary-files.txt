@@ -26,7 +26,10 @@ vendor/etc/apdb/APDB_MT6785_S01__W2236
 vendor/etc/apdb/APDB_MT6785_S01__W2236_ENUM
 
 # Audio
+vendor/bin/mt6660_calibration
 vendor/bin/rt5512_calibration
+vendor/etc/AudioLog_dynamic.xml
+vendor/etc/FV-SAM-MTK2.dat
 vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6785.so
@@ -37,7 +40,6 @@ vendor/lib/lib_bsscore.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libaudio_param_parser-vnd.so
-vendor/lib/libaudioclient_aidl_conversion.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
 vendor/lib/libaudiocomponentengine_vendor.so
@@ -75,7 +77,6 @@ vendor/lib64/lib_bsscore.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
 vendor/lib64/libaudio_param_parser-vnd.so
-vendor/lib64/libaudioclient_aidl_conversion.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
 vendor/lib64/libaudiocomponentengine_vendor.so
@@ -99,12 +100,7 @@ vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 
-# Audio (FX modules)
-vendor/lib/libvibrator.so
-vendor/lib64/libvibrator.so
-
 # Audio (Configs)
-etc/audio_effects.conf
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
@@ -278,6 +274,7 @@ vendor/bin/libccu_ov13b10ofilm_mipi_raw.ddr
 vendor/bin/libccu_ov13b10sunny_mipi_raw.ddr
 vendor/bin/libccu_ov64b40ofilm_mipi_raw.ddr
 vendor/bin/libccu_ov64b40semco_mipi_raw.ddr
+vendor/bin/rttv
 vendor/etc/camera/mibokeh_mt6853_opencl.bin
 vendor/etc/camera/mibokeh_mt6853_parameter.bin
 vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
@@ -1610,6 +1607,8 @@ vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
+vendor/etc/AbnormalDisplayLog_dynamic.xml
+vendor/etc/VideoLog_dynamic.xml
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/egl/libGLES_meow.so
@@ -1867,6 +1866,7 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 -vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss@2.1-mtk-service.xml
 vendor/etc/MNL_Config.xml
 vendor/etc/mpe.conf
+vendor/etc/slp_conf
 vendor/lib/hw/gps.default.so:vendor/lib/hw/gps.mt6785.so
 vendor/lib/hw/gps.default.so
 vendor/lib/librpc.so
@@ -2394,6 +2394,7 @@ vendor/lib64/libmt@1.2.so
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
+vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib/vendor.mediatek.hardware.mms@1.2.so
@@ -2460,6 +2461,7 @@ vendor/bin/nvram_daemon
 vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/nhw
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib/libconnfem.so
 vendor/lib/libcustom_nvram.so
 vendor/lib/libfile_op.so
@@ -2634,6 +2636,7 @@ vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/wlan_assistant.rc
+vendor/etc/wfd_source_capability.csv
 vendor/lib/libwapi.so
 vendor/lib/meta_wifi_data.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
