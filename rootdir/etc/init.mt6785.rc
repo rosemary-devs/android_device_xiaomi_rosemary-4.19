@@ -9,7 +9,6 @@ import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
 import /vendor/etc/init/hw/init.stnfc.rc
 import /system/etc/init/hw/init.stnfc.rc
-import init.mishow.ctl.rc
 import /vendor/etc/init/hw/init.cgroup.rc
 
 
@@ -22,6 +21,8 @@ on early-init
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
 
 on init
     write /proc/bootprof "INIT:init"
@@ -40,6 +41,12 @@ on init
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
+
+# rosemary  Add persist in 20211020 start
+chown system system /mnt/vendor/persist
+chmod 0771 /mnt/vendor/persist
+restorecon_recursive /mnt/vendor/persist
+# rosemary  Add persist in 20211020 end
 
 # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
     write /proc/sys/net/core/wmem_max 8388608
@@ -88,6 +95,7 @@ on charger
 
     chmod 0660 /dev/spm
     chown system system /dev/spm
+    start spm_script
     chmod 0666 /dev/kmsg
     chmod 0775 /mnt/vendor
     mkdir /mnt/vendor/nvcfg
@@ -154,10 +162,6 @@ on fs
     write /proc/sys/vm/dirty_writeback_centisecs 300
 
     swapon_all /vendor/fstab.enableswap
-		#Thermal
-    mkdir /data/vendor/.tp/ 0775 system system
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
 
 on fs
    mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
@@ -165,7 +169,6 @@ on fs
 on late-fs
     write /proc/bootprof "INIT:late-fs"
     wait_for_prop hwservicemanager.ready "true"
-    exec_start wait_for_keymaster
     write /proc/bootprof "INIT:Mount_START --late"
     write /sys/kernel/tracing/trace_marker "B|1|Mount late"
     mount_all --late
@@ -180,13 +183,7 @@ on late-fs
 on post-fs
     write /proc/bootprof "INIT:post-fs"
 
-# rosemary  Add persist in 20211020 start
-    chown system system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
-    restorecon_recursive /mnt/vendor/persist
-# rosemary  Add persist in 20211020 end
-
-    # boot perf. tune
+	    # boot perf. tune
     write /proc/sys/kernel/sched_stune_task_threshold 0
 
     # Support legacy paths
@@ -322,22 +319,6 @@ on post-fs-data
     chown system system /mnt/vendor/persist/.sn.bin
 # M306  Add for sensor calibration command in 20201123 end
 
-    #add camera calidata
-    mkdir /vendor/etc/camera
-    chown root system /vendor/etc/camera
-    chmod 0777 /vendor/etc/camera
-
-    mkdir /mnt/vendor/persist/camera
-    chown system system /mnt/vendor/persist/camera
-    chmod 0777 /mnt/vendor/persist/camera
-    chmod 0644 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
-    restorecon_recursive /mnt/vendor/persist/camera
-
-# M306 add for saving files of TP selftest
-	mkdir /data/vendor/touchpad
-	chown system system /data/vendor/touchpad
-	chmod 0775 /data/vendor/touchpad
-
     # create basic filesystem structure
     # We chown/chmod /mnt/vendor/nvdata again so because mount is run as root + defaults
     chown root system /mnt/vendor/nvdata
@@ -377,10 +358,6 @@ on post-fs-data
     mkdir /data/vendor/camera_dump
     chown root system /data/vendor/camera_dump
     chmod 0771 /data/vendor/camera_dump
-
-    mkdir /data/vendor/camera
-    chown root system /data/vendor/camera
-    chmod 0771 /data/vendor/camera
 
     #Create flicker mount point
     mkdir /data/vendor/flicker
@@ -853,6 +830,14 @@ on early-boot
     write /proc/bootprof "INIT:early-boot"
     verity_update_state
 
+# add mi_thermald for thermal
+service mi_thermald /system/vendor/bin/mi_thermald
+    class main
+    user root
+    group system
+    seclabel u:r:mi_thermald:s0
+
+
 on boot
     write /proc/bootprof "INIT:boot"
 
@@ -869,11 +854,6 @@ on boot
     chown system system /sys/class/leds/blue/brightness
     chmod 0666 /sys/devices/platform/mtkfb/disp_param
     chown system system /sys/devices/platform/mtkfb/disp_param
-
-    chmod 0777 /sys/class/ant_class/ant_state
-    chmod 0777 /sys/class/ant_div_class/ant_div_state
-    chown system system /sys/class/ant_class/ant_state
-    chown system system /sys/class/ant_div_class/ant_div_state
 
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
@@ -1035,7 +1015,6 @@ on boot
     chown root radio /proc/net/netfilter/nfnetlink_log
     chown root radio /proc/net/netfilter/nfnetlink_queue
 
-	chown system system /sys/class/thermal/thermal_message/sconfig
 # WMT proc
     chown shell system /proc/driver/wmt_dbg
     chown shell system /proc/driver/wmt_aee
@@ -1081,6 +1060,14 @@ on property:sys.boot_completed=1
 #bluetooth property parameters
     setprop persist.bluetooth.a2dp_offload.disabled false
 
+# bugreport is triggered by holding down volume down, volume up and power
+service bugreport /system/bin/dumpstate -d -p -B -z \
+        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
+    class late_start
+    disabled
+    oneshot
+    keycodes 114 115 116
+
 # end boot time fs tune
 on property:sys.boot_completed=1
     # Stop bootanimation
@@ -1097,30 +1084,6 @@ on property:sys.boot_completed=1
     write /sys/block/dm-3/queue/read_ahead_kb 128
     write /sys/block/dm-4/queue/read_ahead_kb 128
     write /sys/block/dm-5/queue/read_ahead_kb 128
-
-
-# start EAS+
-on property:sys.boot_completed=1
-
-    write /sys/devices/system/cpu/eas/enable 1
-    write /proc/cpufreq/cpufreq_sched_disable 0
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
-    write /proc/sys/kernel/sched_migration_cost_ns 200000
-    write /proc/sys/net/ipv4/tcp_mtu_probing 1
-    write /proc/sys/net/ipv4/ip_no_pmtu_disc 0
-
-    # restore perf. parameters
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
-    write /proc/sys/kernel/sched_stune_task_threshold -1
-    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
 
 #service dpfd /vendor/bin/dpfd
@@ -1208,43 +1171,21 @@ on property:odm.pocket.mode.keygurad.locked=1
 on property:odm.pocket.mode.keygurad.locked=0
     write /proc/tp_palm 0
 
-# add mi_thermald for thermal
-service mi_thermald /vendor/bin/mi_thermald
-    class main
-    user root
-    group system
-    seclabel u:r:mi_thermald:s0
-	
 # FPSGO FBT Game
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
-	insmod /vendor/lib/modules/mi_memory.ko
 
 # add this link for cust mount
 on init
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
 
-# Ultrasound SQT test
-service ellipticEngineRecord /system/bin/elliptic_engine_record -s /dev/elliptic1:device -f binpayload -p /sdcard/elliptic/
+# VSIM service (vendor OSI)
+service osi /system/bin/osi
     class main
     user root
-    oneshot
     disabled
-
-on  property:vendor.elliptic.engine.record=1
-    start ellipticEngineRecord
-on  property:vendor.elliptic.engine.record=0
-    stop ellipticEngineRecord
-
-service ellipticSensorTest /system/bin/elliptic_sensor_test
-    class main
-    user root
     oneshot
-    disabled
-on  property:vendor.elliptic.sensor.test=1
-    start ellipticSensorTest
-on  property:vendor.elliptic.sensor.test=0
-    stop ellipticSensorTest
+    #seclabel u:r:osi:s0
 
 service displayfeature /system/bin/displayfeature
     class late_start
@@ -1259,21 +1200,8 @@ on property:init.svc.surfaceflinger=running
 
 on property:init.svc.surfaceflinger=restarting
     stop displayfeature
-
-on property:sys.boot_completed="" && property:persist.radio.op.name=AT && property:persist.vendor.op.name.last=UN
-   setprop persist.vendor.op.name.last "AT"
-   setprop sys.powerctl "reboot"
-
-on property:sys.boot_completed="" && property:persist.radio.op.name=UN && property:persist.vendor.op.name.last=AT
-   setprop persist.vendor.op.name.last "UN"
-   setprop sys.powerctl "reboot"
-
-on property:sys.boot_completed="" && property:persist.radio.op.name=UN && property:persist.vendor.op.name.last=""
-   setprop persist.vendor.op.name.last "UN"
-   setprop sys.powerctl "reboot"
-
-on property:sys.boot_completed=1 && property:persist.radio.op.name=*
-   setprop persist.vendor.op.name.last ${persist.radio.op.name}
+    write /proc/sys/net/ipv4/tcp_mtu_probing 1
+    write /proc/sys/net/ipv4/ip_no_pmtu_disc 0
 
 # Enable DT2W
 on boot
