@@ -103,6 +103,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
+debug.renderengine.backend=skiagl
 ro.surface_flinger.enable_frame_rate_override=false
 ro.vendor.mtk_video_hevc_enc_support=1
 persist.sys.mcd_config_file=/system/etc/mcd_default.conf
@@ -111,6 +112,7 @@ ro.hardware.hwcomposer=mtk_common
 ro.hwui.render_ahead=12
 ro.opengles.version=196610
 ro.hardware.egl=meow
+ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.mtk_blulight_def_support=1
 ro.vendor.composer_version=2.2
 ro.vendor.mtk_dre30_support=1
@@ -118,6 +120,7 @@ ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_prefer_64bit_proc=0
 ro.vendor.mtk_pq_support=2
 ro.vendor.pq.mtk_pq_video_whitelist_support=0
+ro.vendor.pq.mtk_mdp_lite_pq_support=0
 ro.vendor.pq.mtk_video_transition=0
 ro.vendor.pq.mtk_scltm_support=1
 ro.vendor.mml.mtk_mml_support=0
@@ -216,8 +219,8 @@ ro.vendor.pref_scale_enable_cfg=1
 # MediaTek
 ro.soc.manufacturer=Mediatek
 ro.soc.model=MT6785
-ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc8sp-mt6785
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp-mt6785-V1.12.13_xiaomi.s0mp1.k85v1.64_P16
+ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc8sp-cs2
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp-cs2-V1.31
 ro.vendor.mediatek.platform=MT6785
 persist.vendor.factory.GB2312=yes
 ro.vendor.mtk.sensor.support=yes
