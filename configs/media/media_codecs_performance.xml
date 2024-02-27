@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright (C) 2012 The Android Open Source Project
 
-     SPDX-License-Identifier: Apache-2.0
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
 <!--
@@ -70,12 +80,12 @@ Only the three quirks included above are recognized at this point:
     <Encoders>
         <!-- MTK codec -->
         <MediaCodec name="c2.mtk.mpeg4.encoder" type="video/mp4v-es" update="true">
-            <Limit name="measured-frame-rate-176x144" range="100-220" />
-            <Limit name="measured-frame-rate-352x288" range="197-204" />
+            <Limit name="measured-frame-rate-176x144" range="150-300" />
+            <Limit name="measured-frame-rate-352x288" range="500-1101" />
             <Limit name="measured-frame-rate-640x480" range="225-496" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.h263.encoder" type="video/3gpp" update="true">
-            <Limit name="measured-frame-rate-176x144" range="96-212" />
+            <Limit name="measured-frame-rate-176x144" range="150-300" />
             <Limit name="measured-frame-rate-352x288" range="466-1025" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.avc.encoder" type="video/avc" update="true">
@@ -149,8 +159,8 @@ Only the three quirks included above are recognized at this point:
         <!-- Google codec -->
         <MediaCodec name="c2.android.mpeg4.decoder" type="video/mp4v-es" update="true">
             <Limit name="measured-frame-rate-176x144" range="359-790" />
-            <Limit name="measured-frame-rate-480x360" range="51-113" />
-            <Limit name="measured-frame-rate-1280x720" range="9-21" />
+            <Limit name="measured-frame-rate-480x360" range="288-633" />
+            <Limit name="measured-frame-rate-1280x720" range="126-278" />
         </MediaCodec>
         <MediaCodec name="c2.android.h263.decoder" type="video/3gpp" update="true">
             <Limit name="measured-frame-rate-176x144" range="313-688" />

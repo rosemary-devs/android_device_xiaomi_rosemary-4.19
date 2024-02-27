@@ -67,7 +67,7 @@
         <DefaultValue>1</DefaultValue>
     </CMD>
     <CMD name="PERF_RES_SCHED_BOOST" id="0x01410000">
-        <Entry path="/sys/devices/system/cpu/sched/sched_boost"></Entry>
+        <Entry path="/proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost"></Entry>
         <Compare>more</Compare>
         <MaxValue>6</MaxValue>
         <MinValue>0</MinValue>
@@ -377,6 +377,20 @@
         <MaxValue>1</MaxValue>
         <MinValue>0</MinValue>
         <Prefix>enable^</Prefix>
+    </CMD>
+    <CMD name="PERF_RES_SCHED_UCLAMP_MAX_FG" id="0x01408700">
+        <Entry path="/dev/stune/foreground/schedtune.uclamp.max"></Entry>
+        <Compare>less</Compare>
+        <MaxValue>100</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>100</DefaultValue>
+    </CMD>
+    <CMD name="PERF_RES_DDR_OPP_CUR" id="0x01408800">
+        <Entry path="/sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp"></Entry>
+        <Compare>less</Compare>
+        <MaxValue>12</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>-1</DefaultValue>
     </CMD>
 </CONTABLE>
 

@@ -76,7 +76,7 @@
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
-                   channels="1" />
+                   channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
             <Video codec="h264"
